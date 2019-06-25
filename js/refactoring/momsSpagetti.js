@@ -108,7 +108,25 @@ function momsSpagetti(lyrics) {
 
     loseYourself = loseYourself + lyrics.ending;
 
-    return loseYourself;
+    return(loseYourself);
 }
 
+//console.log("Original: "+ momsSpagetti(lyrics));
+
 // REFACTORED VERSION HERE //
+
+function momsSpagettiLite(lyrics){
+   let loseYourself = lyrics.intro;
+   const refrain = lyrics.refrain + lyrics.refrain;
+
+    lyrics.choruses.forEach(chorus => {
+        loseYourself += chorus.chorus + refrain;
+    })
+    return loseYourself + lyrics.ending;
+}
+
+
+console.log("Refactored: " + momsSpagettiLite(lyrics));
+
+
+
