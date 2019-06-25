@@ -108,7 +108,7 @@ function momsSpagetti(lyrics) {
 
     loseYourself = loseYourself + lyrics.ending;
 
-    return(loseYourself);
+    return loseYourself;
 }
 
 //console.log("Original: "+ momsSpagetti(lyrics));
@@ -126,7 +126,7 @@ function momsSpagettiLite(lyrics){
 }
 
 
-console.log("Refactored: " + momsSpagettiLite(lyrics));
+//console.log("Refactored: " + momsSpagettiLite(lyrics));
 
 
 
