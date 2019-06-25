@@ -111,15 +111,16 @@ function momsSpagetti(lyrics) {
     return loseYourself;
 }
 
-//console.log("Original: "+ momsSpagetti(lyrics));
+//console.log(momsSpagetti(lyrics));
 
 // REFACTORED VERSION HERE //
 
+//Replaced for loop with reduce function to have choruses and refrains together, making cleaner code. 
 function momsSpagettiLite(lyrics){
     let loseYourself = lyrics.intro;
     const refrain = lyrics.refrain + lyrics.refrain;
   
-    //reduce choruses and refrains and add to loseYourself 
+    
     lyrics.choruses.reduce((acc, chorus) => {
         loseYourself += chorus.chorus + refrain; 
     },0);
@@ -128,7 +129,7 @@ function momsSpagettiLite(lyrics){
     
 }
 
-console.log(momsSpagettiLite(lyrics));
+//console.log(momsSpagettiLite(lyrics));
 
 
 
