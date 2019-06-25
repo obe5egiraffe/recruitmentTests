@@ -116,17 +116,18 @@ function momsSpagetti(lyrics) {
 // REFACTORED VERSION HERE //
 
 function momsSpagettiLite(lyrics){
-   let loseYourself = lyrics.intro;
-   const refrain = lyrics.refrain + lyrics.refrain;
-
-    lyrics.choruses.forEach(chorus => {
+    let loseYourself = lyrics.intro;
+    const refrain = lyrics.refrain + lyrics.refrain;
+  
+    const choruses = lyrics.choruses.reduce((acc, chorus) => {
         loseYourself += chorus.chorus + refrain;
-    })
+    },0)
     return loseYourself + lyrics.ending;
+    
 }
 
 
-//console.log("Refactored: " + momsSpagettiLite(lyrics));
+console.log(momsSpagettiLite(lyrics));
 
 
 
