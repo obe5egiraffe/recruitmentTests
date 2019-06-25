@@ -119,13 +119,14 @@ function momsSpagettiLite(lyrics){
     let loseYourself = lyrics.intro;
     const refrain = lyrics.refrain + lyrics.refrain;
   
-    const choruses = lyrics.choruses.reduce((acc, chorus) => {
-        loseYourself += chorus.chorus + refrain;
-    },0)
+    //reduce choruses and refrains and add to loseYourself 
+    lyrics.choruses.reduce((acc, chorus) => {
+        loseYourself += chorus.chorus + refrain; 
+    },0);
+
     return loseYourself + lyrics.ending;
     
 }
-
 
 console.log(momsSpagettiLite(lyrics));
 
